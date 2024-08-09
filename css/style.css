@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* body{
+    background-color: #000;
+} */
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header .btn-contato button, .hero-site button{
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header{
+    width: 100%;
+    padding: 40px 0;
+    position: fixed; /* Essa linha e as duas linhas abixo são para deixar o cabeçalho transparente */
+    top: 0;
+    left: 0;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    max-width: 40px;
+}
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block; /* Esse display serve para habilitar o scale abaixo */
+    transition: 0.2s;
+}
+
+header .menu-desktop nav ul li a:hover{
+    transform: scale(1.05);
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+}
+
+header .btn-contato button:hover, .hero-site button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-site{
+    height: 95vh;
+    background-image: url(../imagens/bg-inicio-site.jpg);
+    background-repeat: no-repeat; /* Usado para a imagem não ficar repitando para ocupar toda o espaço da tela */
+    background-size: cover; /* Faz com que a imagem tenha o tamanho total da tela */
+    background-position: center; /* Centraliza a imagem caso ela não seja do tamanho exato do espaço da tela */
+    color: #fff;
+}
+
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span{
+    display: flex;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+.hero-site .txt-hero p span{
+    display: flex;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
