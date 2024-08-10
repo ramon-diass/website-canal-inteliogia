@@ -1,3 +1,4 @@
+/* Estilos gerais */
 *{
     margin: 0;
     padding: 0;
@@ -5,31 +6,43 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* body{
-    background-color: #000;
-} */
+body{
+    background-color: #e3e3e3;
+}
+
+p{
+    font-size: 20px;
+}
 
 .interface{
     max-width: 1280px;
     margin: 0 auto;
 }
 
-header .btn-contato button, .hero-site button{
+header .btn-contato button, .hero-site button, .parallax button{
     font-size: 18px;
     color: #fff;
     background-color: transparent;
     border: 1px solid #fff;
-    text-transform: capitalize;
+    text-transform: initial;
     cursor: pointer;
     transition: .5s;
 }
 
+header .btn-contato button:hover, .hero-site button:hover, .parallax button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilo do cabeçalho */
 header{
     width: 100%;
     padding: 40px 0;
-    position: fixed; /* Essa linha e as duas linhas abixo são para deixar o cabeçalho transparente */
+    position: fixed; /* Essa linha e as duas linhas abixo são para deixar o cabeçalho transparente e fixo no topo */
     top: 0;
     left: 0;
+    transition: .4s; /* Usado para a transformação do menu quando há rolagem da tela */
+    z-index: 5; /* Usadp para o menu ficar na frente de todas as seções */
 }
 
 header .interface{
@@ -40,6 +53,10 @@ header .interface{
 
 header .logo img{
     max-width: 40px;
+}
+
+header .logo img.logo-preta{
+    display: none;
 }
 
 header .menu-desktop nav ul{
@@ -54,6 +71,7 @@ header .menu-desktop nav ul li{
 header .menu-desktop nav ul li a{
     text-decoration: none;
     color: #fff;
+    font-size: 20px;
     text-transform: capitalize;
     display: inline-block; /* Esse display serve para habilitar o scale abaixo */
     transition: 0.2s;
@@ -68,11 +86,36 @@ header .btn-contato button{
     height: 50px;
 }
 
-header .btn-contato button:hover, .hero-site button:hover{
+/* Estilo do menu quando não está no topo */
+header.rolar{
     background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 0 8px #00000066;
+}
+
+header.rolar .menu-desktop nav ul li a{
     color: #000;
 }
 
+header.rolar .btn-contato button{
+    color: #000;
+    border: 1px solid #000;
+}
+
+header.rolar .btn-contato button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+header.rolar .logo .logo-branca{
+    display: none;
+}
+
+header.rolar .logo .logo-preta{
+    display: block;
+}
+
+/* Estilo banner inicial */
 .hero-site{
     height: 95vh;
     background-image: url(../imagens/bg-inicio-site.jpg);
@@ -100,7 +143,6 @@ header .btn-contato button:hover, .hero-site button:hover{
 }
 
 .hero-site .txt-hero p{
-    font-size: 20px;
     font-weight: 300;
     margin: 30px 0;
 }
@@ -113,4 +155,242 @@ header .btn-contato button:hover, .hero-site button:hover{
     width: 220px;
     height: 60px;
     font-size: 20px;
+}
+
+/* Estilo das vantagens */
+.vantagens{
+    padding: 80px 0;
+}
+
+.vantagens .itens-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.vantagens .txt-itens h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagens .txt-itens h3 span{
+    font-weight: 300;
+}
+
+.vantagens .itens-container .img-itens img{
+    max-width: 480px;
+}
+
+/* Estilo da área de contatos */
+.contato{
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.contato .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txt-contato h3{
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.txt-contato p{
+    font-size: 20px;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    width: 400px;
+    height: 60px;
+    margin: 0 110px 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 18px;
+    transition: .4s;
+}
+
+.contato .icons-contato button i{
+    font-size: 22px;
+}
+
+.contato .icons-contato button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilo do parallax */
+.parallax{
+    height: 600px;
+    background-image: url(../imagens/hotel-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Aqui é onde faz o efeito parallax, que a imagem fica fixa mesmo rolando a tela */
+    position: relative; /* Esse position serve para habilitar o parallax que vai ser editado abaixo */
+    color: #fff;
+    text-align: center;
+}
+
+.parallax .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000b9;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* O z-index só funciona se o position não for static (que é o padrão) */
+}
+
+.parallax .interface{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+}
+
+.parallax h3{
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 200;
+}
+
+.parallax h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.parallax p{
+    margin: 40px 0;
+    font-weight: 300;
+}
+
+.parallax button{
+    width: 220px;
+    height: 60px;
+}
+
+/* Estilo da seção como funciona */
+.como-funciona{
+    padding: 80px 0;
+}
+
+.txt-funciona, .instrucoes{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px; /* Esse -4px é algum bug do inline-block que adiciona 4px nas laterais, sem ele os blocos não ficam lado a lado */
+    vertical-align: top;
+}
+
+.como-funciona .txt-funciona{ /* Faz com que o como funciona acompanhe a tela */
+    position: sticky;
+    top: 40%; /* Posição onde o como funciona vai acompanhar a tela, quanto menor mais em cima fica */
+    padding-bottom: 32px;  /* Para ajustar o final onde o como funciona para, para ajustar com o último box */
+}
+
+.como-funciona .txt-funciona h3{
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 60px;
+}
+
+.como-funciona .txt-funciona h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.instrucoes .instru-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.instrucoes .instru-box img{
+    max-width: 100px;
+}
+
+.instrucoes .instru-box h4{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.instrucoes .instru-box h4 span{
+    font-weight: 300;
+}
+
+.instrucoes .instru-box p{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Estilo do rodapé */
+footer{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer .btn-footer button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .4s;
+}
+
+footer .btn-footer button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+footer .links-footer{
+    margin: 30px 0 30px 20px;
+}
+
+footer .links-footer a{
+    color: #fff;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+footer .direitos{
+    border-top: 3px solid #fff;
+}
+
+footer .direitos p{
+    padding: 20px 0 0 17px;
 }
