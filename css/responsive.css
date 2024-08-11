@@ -1,0 +1,113 @@
+@media screen and (max-width: 910px) {
+    header .menu-desktop, header .btn-contato{
+        display: none;
+    }
+
+    header .btn-menu-mob{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    /* Responsivo topo do site */
+    .hero-site .txt-hero h1{
+        font-size: 3em;
+        line-height: 45px;
+    }
+    
+    .hero-site .txt-hero p{
+        font-size: 16px;
+    }
+    
+    .hero-site .txt-hero p span{
+        display: inline;
+    }
+    
+    .hero-site button{
+        font-size: 18px;
+    }
+
+    /* Responsivo seção vantagens */
+    .vantagens .itens-container{
+        flex-direction: column;
+    }
+    
+    .vantagens .txt-itens p{
+        margin-bottom: 20px;
+    }
+    
+    .vantagens .itens-container .img-itens img{
+        width: 100%;
+    }
+
+    .vantagens .itens-container .item-1{
+        order: 1;
+    }
+
+    .vantagens .itens-container .item-2{
+        order: 0;
+    }
+
+    /* Responsivo seção contatos */
+    .contato .interface{
+        display: block;
+        width: 100%;
+    }
+    
+    .txt-contato h3{
+        font-size: 2.2em;
+        line-height: 40px;
+    }
+    
+    .txt-contato p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .contato .icons-contato button{
+        width: 100%;
+    }
+
+    .contato .icons-contato button p{
+        font-size: 16px;
+    }
+
+    /* Responsivo do parallax */
+    .parallax h3{
+        font-size: 2.3em;
+    }
+
+    .parallax p{
+        font-size: 17px;
+    }
+
+    /* Responsivo da seção como funciona */
+    .txt-funciona, .instrucoes{
+        display: block;
+        width: 100%;
+    }
+
+    .como-funciona .txt-funciona{
+        position: static;
+    }
+
+    .como-funciona .txt-funciona h3{
+        font-size: 3.4em;
+        line-height: 50px;
+    }
+
+    .instrucoes .instru-box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Responsivo do rodapé */
+    footer .links-footer a{
+        display: block;
+        margin: 15px 0;
+    }
+
+    footer .direitos p{
+        font-size: 16px;
+    }
+}
